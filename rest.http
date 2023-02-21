@@ -1,10 +1,8 @@
 POST http://localhost:3000/register
 content-type: application/json
 {
-    "id" : 1,
     "title": "Sample title",
     "content": "Sample Content",
-    "published": false
 }
 
 ###
@@ -13,6 +11,7 @@ GET  http://localhost:3000/materials
 PUT http://localhost:3000/update/
 {
     "title": "Updated title",
+    "published": true
 }
 ###
 DELETE http://localhost:3000/delete/

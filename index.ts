@@ -10,15 +10,13 @@ app.use(express.json());
 
 //POST - CREATE
 app.post("/register", async (req, res) => {
-    const { id, title, content, published } = req.body;
+    const { title, content } = req.body;
 
     const post = await prisma.post.create({
         data: [
             {
-                id,
                 title,
                 content,
-                published: false,
             },
         ],
     });
@@ -34,7 +32,7 @@ app.get("/material", async (req, res) => {
 
 //PUT - UPDATE
 app.put("/update/:id", async (req, res) => {
-    const { id, title } = req.body;
+    const { id, title, published } = req.body;
 
     const updatePosts = await prisma.post.update({
         where: {
@@ -42,6 +40,7 @@ app.put("/update/:id", async (req, res) => {
         },
         data: {
             title,
+            published,
         },
     });
     res.json({ updatePosts });
