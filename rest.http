@@ -1,10 +1,19 @@
 POST http://localhost:3000/register
 content-type: application/json
-
 {
-    "name": "Gelo",
-    "email": "gelo@gmail.com"
+    "id" : 1,
+    "title": "Sample title",
+    "content": "Sample Content",
+    "published": false
 }
 
 ###
-GET  http://localhost:3000/users
+GET  http://localhost:3000/materials
+###
+PUT http://localhost:3000/update/
+{
+    "title": "Updated title",
+}
+###
+DELETE http://localhost:3000/delete/
+###

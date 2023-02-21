@@ -4,7 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "nodemon index.ts"
+        "dev": "nodemon index.ts",
+        "psh": "git push origin master",
+        "add": "git add ."
     },
     "keywords": [],
     "author": "",
