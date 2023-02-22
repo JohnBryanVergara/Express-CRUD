@@ -13,12 +13,10 @@ app.post("/register", async (req, res) => {
     const { title, content } = req.body;
 
     const post = await prisma.post.create({
-        data: [
-            {
-                title,
-                content,
-            },
-        ],
+        data: {
+            title,
+            content,
+        },
     });
 
     res.json({ post });
